@@ -1,0 +1,1 @@
+# Plataforma-de-Intelig-ncia-de-Mercado-para-Fortalecimento-do-Com-rcio-Local
