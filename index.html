@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPulse Local</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="main-navigation">
+
+        <button onclick="showClientArea()">
+            👤 Cliente
+        </button>
+    
+        <button onclick="showMerchantArea()">
+            🏪 Comerciante
+        </button>
+    
+    </nav>
+
+    <header>
+        <h1>MarketPulse Local</h1>
+
+        <p>
+            Protótipo escolar FECART 2026 —
+            pessoas, lojas, preços, estoques e indicadores são fictícios.
+        </p>
+    </header>
+
+    <main>
+
+        <!-- ÁREA DO CLIENTE -->
+        <section id="cliente">
+            <h2>Área do Cliente</h2>
+
+            <div>
+                <h3>Escolha o consumidor</h3>
+            
+                <button>Ana</button>
+                <button>Lucas</button>
+                <button>Camila</button>
+            
+                <div id="cliente-selecionado">
+                    <p><strong>Consumidor selecionado:</strong> Ana</p>
+                    <p><strong>Cidade:</strong> Jundiaí</p>
+                    <p><strong>Bairro:</strong> Centro</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Assistente</h3>
+
+                <p>
+                    Olá! O que você está precisando hoje?
+                </p>
+
+                <input
+                    type="text"
+                    placeholder="Digite o que você precisa..."
+                >
+
+                <button>Enviar</button>
+            </div>
+
+            <div>
+                <h3>Exemplos de busca</h3>
+
+                <button>Ração para gato</button>
+                <button>Caderno universitário</button>
+                <button>Fone Bluetooth</button>
+            </div>
+
+            <div>
+                <h3>Personalização</h3>
+
+                <button>Personalização desligada</button>
+            </div>
+
+            <div>
+                <h3>Ofertas</h3>
+
+                <button>Recomendado</button>
+                <button>Mais perto</button>
+                <button>Menor preço</button>
+
+                <div id="produtos">
+                    <p>
+                        Faça uma busca para visualizar as ofertas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ÁREA DO COMERCIANTE -->
+        <section id="comerciante">
+            <div class="merchant-header">
+
+    <h2>🏪 Área do Comerciante</h2>
+
+    <p>
+        Painel de demonstração para vendedores locais.
+    </p>
+
+    <label for="merchant-select">
+        Escolha a loja:
+    </label>
+
+    <select id="merchant-select">
+        <option value="">
+            Selecione uma loja
+        </option>
+
+        <option value="novopet">
+            NovoPet
+        </option>
+
+        <option value="petmais">
+            Pet Mais
+        </option>
+
+        <option value="casaanimal">
+            Casa Animal
+        </option>
+
+        <option value="papelcentro">
+            Papel Centro
+        </option>
+
+        <option value="estudamais">
+            Estuda Mais
+        </option>
+
+        <option value="teclocal">
+            TecLocal
+        </option>
+    </select>
+    <div id="selected-merchant-info">
+        <div class="merchant-metrics">
+
+            <div class="metric-card">
+                <h3>Total de buscas</h3>
+                <p id="metric-searches">0</p>
+            </div>
+        
+            <div class="metric-card">
+                <h3>Produto mais procurado</h3>
+                <p id="metric-top-product">-</p>
+            </div>
+        
+            <div class="metric-card">
+                <h3>Buscas sem resultado</h3>
+                <p id="metric-no-results">0</p>
+            </div>
+        
+            <div class="metric-card">
+                <h3>Intenção de compra em 7 dias</h3>
+                <p id="metric-intent">0</p>
+            </div>
+        
+        </div>
+        <p>
+            Nenhuma loja selecionada.
+        </p>
+    </div>
+
+</div>
+
+            <h2>Área do Comerciante</h2>
+
+            <div>
+                <h3>Escolha a loja</h3>
+
+                <button>NovoPet</button>
+                <button>Pet Mais</button>
+                <button>Casa Animal</button>
+                <button>Papel Centro</button>
+                <button>Estuda Mais</button>
+                <button>TecLocal</button>
+            </div>
+
+            <div>
+                <h3>Indicadores</h3>
+
+                <div>
+                    <strong>Total de buscas</strong>
+                    <p id="total-buscas">0</p>
+                </div>
+
+                <div>
+                    <strong>Produto principal</strong>
+                    <p id="produto-principal">-</p>
+                </div>
+
+                <div>
+                    <strong>Buscas sem resultado</strong>
+                    <p id="sem-resultado">0</p>
+                </div>
+
+                <div>
+                    <strong>Intenção de compra em 7 dias</strong>
+                    <p id="intencao-compra">0</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Oportunidade sugerida</h3>
+
+                <p id="oportunidade">
+                    Os indicadores aparecerão aqui.
+                </p>
+            </div>
+
+            <div>
+                <h3>Catálogo</h3>
+
+                <div id="catalogo">
+                    <p>Os produtos da loja aparecerão aqui.</p>
+                </div>
+            </div>
+
+            <div>
+                <button>Atualizar indicadores</button>
+                <button>Reiniciar demonstração</button>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <button onclick="checkSavedEvents()">
+        Verificar eventos salvos
+    </button>
+    <button onclick="testLocalStorage()">
+        Testar armazenamento
+    </button>
+    
+    <pre id="saved-events"></pre>
+</body>
+</html>
